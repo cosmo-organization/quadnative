@@ -10,9 +10,12 @@
   <style>
     :root {
       --call-color: blue;
+      --pre-color:rgb(6, 44, 150);
     }
-    pre{
-      white-space: pre-wrap;
+
+    pre {
+      overflow-x: auto;
+      color: var(--pre-color);
     }
   </style>
 </head>
@@ -103,13 +106,13 @@
                 <p>This constructor create a new QuadnativeConfig class instance by taking filename or dictionary as
                   config argument.</p>
                 <strong>config :</strong> This argument refers to a dictionary data or a json file configuration. <br>
-                If config is dictionary then key and value must be. <br>
+                If config is dictionary then key and value must be. <br><br>
                 <pre>
                   lang:[('Tag','filename')]
                   lib:['path1','path2',.....]
                   config:'filename'
                 </pre>
-                If config is json file then key and value must be. <br>
+                If config is json file then key and value must be. <br><br>
                 <pre>
                   {
                     name:"QuadnativeEngine",
@@ -135,12 +138,13 @@
         </h2>
         <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
           data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-            richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-            nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee
-            nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-            sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw
-            denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
+          <div class="accordion-body">
+            <p>
+              This class provide control over QuadnativeEngine configuration such as print log adding external variables
+              such as Server.Id , Cookie.Time etc. We can also add external function and we can change python command
+              module.
+            </p>
+          </div>
         </div>
       </div>
     </div>
