@@ -11,6 +11,8 @@
     :root {
       --call-color: blue;
       --pre-color: rgb(6, 44, 150);
+      --function-color:rgb(230, 84, 84);
+      --comment-color:rgb(0, 255, 0);
     }
 
     pre {
@@ -102,7 +104,7 @@
             </p>
             <ul>
               <li>Constructor
-                <p><strong style="color: rgb(230, 84, 84);">QuadnativeConfig(config,setting)</strong><br>
+                <p><strong style="color:var(--function-color);">QuadnativeConfig(config,setting)</strong><br>
                 <p>This constructor create a new QuadnativeConfig class instance by taking filename or dictionary as
                   config argument.</p>
                 <strong>config :</strong> This argument refers to a dictionary data or a json file configuration. <br>
@@ -141,27 +143,27 @@
               </li>
               <li>Functions
                 <ul>
-                  <li><strong style="color:  rgb(230, 84, 84);"> get_setting()</strong><br>
+                  <li><strong style="color: var(--function-color);"> get_setting()</strong><br>
                     This method return QuadnativeSetting instance from QuadnativeConfig class.
                   </li>
-                  <li><strong style="color:  rgb(230, 84, 84);">get_langs()</strong><br>
+                  <li><strong style="color: var(--function-color);">get_langs()</strong><br>
                     This method return list of languages (Tag,File)<br>
                   </li>
-                  <li><strong style="color:  rgb(230, 84, 84);">get_config()</strong><br>
+                  <li><strong style="color:  var(--function-color);">get_config()</strong><br>
                     This method return configuration filename.
                   </li>
-                  <li><strong style="color:  rgb(230, 84, 84);">get_libs()</strong><br>
+                  <li><strong style="color:  var(--function-color);">get_libs()</strong><br>
                     This method return libraries folder.
                   </li>
-                  <li><strong style="color:  rgb(230, 84, 84);">add_lib(path='path')</strong><br>
+                  <li><strong style="color: var(--function-color);">add_lib(path='path')</strong><br>
                     This method add library folder in lib property. <br>
                     <strong>path :</strong> This argument refers to a folder path of 'q' files.
                   </li>
-                  <li><strong style="color:  rgb(230, 84, 84);">add_lang(lang=('En', 'lang.En.q'))</strong><br>
+                  <li><strong style="color: var(--function-color);">add_lang(lang=('En', 'lang.En.q'))</strong><br>
                     This method add language suport in langs property. <br>
                     <strong>lang :</strong> This argument refers to a tuple with a tag and file name.
                   </li>
-                  <li><strong style="color:  rgb(230, 84, 84);">set_config(name='configure.q')</strong><br>
+                  <li><strong style="color:  var(--function-color);">set_config(name='configure.q')</strong><br>
                     This method change property of config. <br>
                     <strong>name :</strong> This argument refers to a configurable 'q' file.
                   </li>
@@ -187,7 +189,7 @@
               module.
             </p>
             <li>Constructor
-              <p><strong style="color: rgb(230, 84, 84);">QuadnativeSetting()</strong><br>
+              <p><strong style="color: var(--function-color);">QuadnativeSetting()</strong><br>
 
               <p>
                 This constructor create a new QuadnativeSetting class instance.
@@ -196,7 +198,7 @@
             </li>
             <li>Functions
               <ul>
-                <li><strong style="color:  rgb(230, 84, 84);"> add_global_var(varname,value)</strong><br>
+                <li><strong style="color:  var(--function-color);"> add_global_var(varname,value)</strong><br>
                   this method add global variable in environment of QuadnativeEngine.Its take varname as variable name
                   and value take type of Value, ArrayList and Dictionary.
                   <br>
@@ -213,7 +215,7 @@
                    setting.add_global_var("array_var",ArrayList([9,1,2]))
                     </pre>
                 </li>
-                <li><strong style="color:  rgb(230, 84, 84);">add_function (functionname, function)</strong><br>
+                <li><strong style="color: var(--function-color);">add_function (functionname, function)</strong><br>
                   This method add function in environment of QuadnativeEngine. Its take functionname as name of defined
                   function and function as a type of Function. <br>
                   <strong>functionname :</strong> This argument refers to a function name. <br>
@@ -223,7 +225,7 @@
                    def something():
                       print("hello world")
                    setting= QuadnativeSetting()
-                   setting.add_function("Call_me",something)  <pre style="color:green">//now something function called by Call_me</pre>
+                   setting.add_function("Call_me",something)  <pre style="color:var(--comment-color);">//now something function called by Call_me</pre>
                   </pre>
                 </li>
               </ul>
@@ -234,7 +236,6 @@
     </div>
 
   </div>
-
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
