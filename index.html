@@ -10,7 +10,7 @@
   <style>
     :root {
       --call-color: blue;
-      --pre-color:rgb(6, 44, 150);
+      --pre-color: rgb(6, 44, 150);
     }
 
     pre {
@@ -102,7 +102,7 @@
             </p>
             <ul>
               <li>Constructor
-                <p><strong style="color: rgb(230, 84, 84);">QuadnativeConfig(config)</strong><br>
+                <p><strong style="color: rgb(230, 84, 84);">QuadnativeConfig(config,setting)</strong><br>
                 <p>This constructor create a new QuadnativeConfig class instance by taking filename or dictionary as
                   config argument.</p>
                 <strong>config :</strong> This argument refers to a dictionary data or a json file configuration. <br>
@@ -121,6 +121,20 @@
                     config :"filename",
                     lib:['path1','path2',.....]
                   }
+                </pre>
+                <strong>setting :</strong> This argument refers to instance of QuadnativeSetting. <br> <br>
+                <strong>sample:</strong> <br>
+                <pre>
+                  setting=QuadnativeSetting()
+                  config={
+                    'lang':[
+                      ('En','lang.En.q'),
+                      ('Es','lang.Es.q')
+                    ],
+                    lib:['path1','path2',.....],
+                    config:'configure.q'
+                  }
+                  
                 </pre>
                 </p>
               </li>
@@ -144,6 +158,48 @@
               such as Server.Id , Cookie.Time etc. We can also add external function and we can change python command
               module.
             </p>
+            <li>Constructor
+              <p><strong style="color: rgb(230, 84, 84);">QuadnativeSetting()</strong><br>
+
+              <p>
+                This constructor create a new QuadnativeSetting class instance.
+              </p>
+              </p>
+            </li>
+            <li>Functions
+              <ul>
+                <li><strong style="color:  rgb(230, 84, 84);"> add_global_var(varname,value)</strong><br>
+                  this method add global variable in environment of QuadnativeEngine.Its take varname as variable name
+                  and value take type of Value, ArrayList and Dictionary.
+                  <br>
+                  <strong> varname :</strong> This argument refers to a variable name. <br>
+                  <strong> value:</strong> This argument refers to value of type Value, ArrayList and Dictionary. <br>
+                  <br>
+                  <strong>sample:</strong>
+                  <pre>
+                   setting= QuadnativeSetting()
+                   setting.add_global_var("int_var", Value(9))
+                   setting.add_global_var("setting_var",Value("Hello"))
+                   setting.add_global_var("float_var",Value(4.6))
+                   setting.add_global_var("dictionary_var",Dictionary({'key':'value'}))
+                   setting.add_global_var("array_var",ArrayList([9,1,2]))
+                    </pre>
+                </li>
+                <li><strong style="color:  rgb(230, 84, 84);">add_function (functionname, function)</strong><br>
+                  This method add function in environment of QuadnativeEngine. Its take functionname as name of defined
+                  function and function as a type of Function. <br>
+                  <strong>functionname :</strong> This argument refers to a function name. <br>
+                  <strong>function :</strong> This argument refers to a Function. <br> <br>
+                  <strong>sample:</strong>
+                  <pre>
+                   def something():
+                      print("hello world")
+                   setting= QuadnativeSetting()
+                   setting.add_function("Call_me",something)  <pre style="color:green">//now something function called by Call_me</pre>
+                  </pre>
+                </li>
+              </ul>
+            </li>
           </div>
         </div>
       </div>
