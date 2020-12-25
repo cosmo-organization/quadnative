@@ -1,0 +1,20 @@
+:root{
+    --single-comment-color:green;
+    --multi-comment-color:rgb(139, 0, 0);
+    --var-color:gray;
+    --number-color:var(--single-comment-color);
+    --def-color:blue;
+    --function-color:black;
+    --tab-space:25px;
+    --return-color:blue;
+}
+slc{color: var(--single-comment-color);}
+slc::before{content: '# ';}
+mlc{color:var(--multi-comment-color);}
+mlc::before,mlc::after{content: "' ' '";}
+v{color:var(--var-color);}
+number{color: var(--number-color);}
+function{color:var(--function-color);}
+function::before{content: 'def ';color:var(--def-color)}
+funcbody{padding-left: var(--tab-space);}
+return::before{content: 'return ';color: var(--return-color); padding-left:var(--tab-space) ;}
