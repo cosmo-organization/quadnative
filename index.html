@@ -59,7 +59,7 @@
             </p>
             <ul>
               <li>Constructor
-                <p><strong style="color: rgb(230, 84, 84);">QuadnativeEngine(quad_config)</strong><br>
+                <p><strong style="color:var(--function-color);">QuadnativeEngine(quad_config)</strong><br>
                 <p>This is unusual constructor for user. But it used inside QuadnativeEngine class to creat get instance
                   (quad_config).</p>
                 <strong> quad_config :</strong> This argument refers to a QuadnativeConfig class.
@@ -67,18 +67,18 @@
               </li>
               <li>Functions
                 <ul>
-                  <li><strong style="color:  rgb(230, 84, 84);"> get_instance(quad_config)</strong><br>
+                  <li><strong style="color:  var(--function-color);"> get_instance(quad_config)</strong><br>
                     This is a startatic method and it used as<strong style="color: var(--call-color);">
                       QuadnativeEngine.get_instance (config)</strong> Its return an
                     instance of QuadnativeEngine. This method follow singleton design pattern.<br>
                     <strong> quad_config :</strong> This argument refers to a QuadnativeConfig class.
 
                   </li>
-                  <li><strong style="color:  rgb(230, 84, 84);">render_quad (filename="index.q")</strong><br>
+                  <li><strong style="color: var(--function-color);">render_quad (filename="index.q")</strong><br>
                     This method is used to parse an 'q' file and return rendered html text.<br>
                     <strong>filename :</strong> This argument refers to a filename (type of string).
                   </li>
-                  <li><strong style="color:  rgb(230, 84, 84);">get_config()</strong><br>
+                  <li><strong style="color: var(--function-color);">get_config()</strong><br>
                     This method return QuadnativeConfig instance from <strong style="color: var(--call-color);">
                       QuadnativeEngine.get_config()</strong>.<br>
                   </li>
