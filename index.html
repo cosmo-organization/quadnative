@@ -134,11 +134,39 @@
                     lib:['path1','path2',.....],
                     config:'configure.q'
                   }
+                  q_config=QuadnativeConfig(config,setting)
                   
                 </pre>
                 </p>
               </li>
-
+              <li>Functions
+                <ul>
+                  <li><strong style="color:  rgb(230, 84, 84);"> get_setting()</strong><br>
+                    This method return QuadnativeSetting instance from QuadnativeConfig class.
+                  </li>
+                  <li><strong style="color:  rgb(230, 84, 84);">get_langs()</strong><br>
+                    This method return list of languages (Tag,File)<br>
+                  </li>
+                  <li><strong style="color:  rgb(230, 84, 84);">get_config()</strong><br>
+                    This method return configuration filename.
+                  </li>
+                  <li><strong style="color:  rgb(230, 84, 84);">get_libs()</strong><br>
+                    This method return libraries folder.
+                  </li>
+                  <li><strong style="color:  rgb(230, 84, 84);">add_lib(path='path')</strong><br>
+                    This method add library folder in lib property. <br>
+                    <strong>path :</strong> This argument refers to a folder path of 'q' files.
+                  </li>
+                  <li><strong style="color:  rgb(230, 84, 84);">add_lang(lang=('En','lang.En.q'))</strong><br>
+                    This method add language suport in langs property. <br>
+                    <strong>lang :</strong> This argument refers to a tuple with a tag and file name.
+                  </li>
+                  <li><strong style="color:  rgb(230, 84, 84);">set_config(name='configure.q')</strong><br>
+                    This method change property of config. <br>
+                    <strong>name :</strong> This argument refers to a configurable 'q' file.
+                  </li>
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
@@ -179,7 +207,7 @@
                   <pre>
                    setting= QuadnativeSetting()
                    setting.add_global_var("int_var", Value(9))
-                   setting.add_global_var("setting_var",Value("Hello"))
+                   setting.add_global_var("string_var",Value("Hello"))
                    setting.add_global_var("float_var",Value(4.6))
                    setting.add_global_var("dictionary_var",Dictionary({'key':'value'}))
                    setting.add_global_var("array_var",ArrayList([9,1,2]))
